@@ -8,7 +8,10 @@
       class="toast"
       :class="[`toast-${type}`, `is-${position}`]"
       @click="onClick">
-      <p class="toast-text">{{message}}</p>
+      <header slot="header" class="toast-header"></header>
+      <main class="toast-text">
+        <div slot="message" v-html="message"></div>
+      </main>
     </div>
   </transition>
 </template>
